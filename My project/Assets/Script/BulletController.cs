@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     public int bulletSpeed = 30;
     public int lifespan = 5;
+    public int bulletDamage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,11 @@ public class BulletController : MonoBehaviour
         transform.position = transform.position + transform.up * Time.deltaTime * bulletSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {        
-        if(collision.gameObject.CompareTag("Asteroid"))
+        if(other.gameObject.tag != "Player")
         {
-            Destroy(collision.gameObject);
+            other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);
             Destroy(gameObject);
         }
     }

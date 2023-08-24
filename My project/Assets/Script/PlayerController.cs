@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public int speedModifier = 10;
     public int bulletSpeed = 30;
     public GameObject bullet;
+    public Health health;
+    public int playerDamage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -85,8 +87,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        Damage otherDamage = other.gameObject.GetComponent<Damage>();
+        if (otherDamage)
+        {
+            health.ReduceHP(otherDamage.value);
+            other.gameObject.GetComponent<Health>().ReduceHP(playerDamage);
+        }
     }
 }
