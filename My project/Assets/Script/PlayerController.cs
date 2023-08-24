@@ -75,10 +75,18 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
-            GameObject bulletInstance2 = Instantiate(bullet, transform.position, Quaternion.Inverse(transform.rotation));
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
     }
 }
