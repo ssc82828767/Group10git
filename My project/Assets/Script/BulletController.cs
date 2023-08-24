@@ -20,12 +20,11 @@ public class BulletController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Bullet Collision Detectedonon");
-        Destroy(gameObject);
+    {        
         if(collision.gameObject.CompareTag("Asteroid"))
         {
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
