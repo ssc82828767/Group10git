@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public PolygonCollider2D playerCollider;
     public int speedModifier = 10;
+    public int bulletSpeed = 30;
+    public GameObject bullet;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         SetAngle();
+        ShootBullet();
         transform.position = transform.position + transform.up * Time.deltaTime * speedModifier;
     }
 
@@ -68,6 +70,15 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKey(KeyCode.S))
         {
             transform.eulerAngles = Vector3.forward * down;
+        }
+    }
+
+    void ShootBullet()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position, Quaternion.Inverse(transform.rotation));
         }
     }
 }
