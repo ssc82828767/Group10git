@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetAngle();
+        transform.position = transform.position + transform.up * Time.deltaTime * speedModifier;
+    }
+
+    void SetAngle()
+    {
         int left = 90;
         int leftup = 45;
         int leftdown = 135;
@@ -25,7 +31,7 @@ public class PlayerController : MonoBehaviour
         int up = 0;
         int down = 180;
 
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -38,7 +44,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 transform.eulerAngles = Vector3.forward * left;
-            } 
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
@@ -63,8 +69,5 @@ public class PlayerController : MonoBehaviour
         {
             transform.eulerAngles = Vector3.forward * down;
         }
-        
-
-        transform.position = transform.position + transform.up * Time.deltaTime * speedModifier;
     }
 }
