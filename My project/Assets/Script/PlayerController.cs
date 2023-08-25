@@ -1,19 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static int score = 0;
+
     public int speedModifier = 10;
     public int bulletSpeed = 30;
     public GameObject bullet;
-    public Health health;
     public int playerDamage = 10;
+    public float bulletCooldown = 0.25f;
+
+    private float bulletCooldownCurrent = 0.0f; 
+    private Health health;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -77,13 +84,14 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        bulletCooldownCurrent += Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
         {
             GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4, transform.rotation);
             GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletCooldownCurrent = 0.0f;
         }
     }
 
