@@ -23,9 +23,12 @@ public class BulletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {        
         if(other.gameObject.tag != "Player")
-        {
-            other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);
-            Destroy(gameObject);
+        { 
+            if (other.gameObject.tag != "Item" && other.gameObject.tag != "Bullet")
+            {
+                other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);
+                Destroy(gameObject);
+            }
         }
     }
 }

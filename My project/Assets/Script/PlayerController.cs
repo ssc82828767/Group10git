@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float bulletCooldownCurrent = 0.0f; 
     private Health health;
 
+    public GameObject Next_tier;
 
     // Start is called before the first frame update
     void Start()
@@ -103,5 +104,22 @@ public class PlayerController : MonoBehaviour
             health.ReduceHP(otherDamage.value);
             other.gameObject.GetComponent<Health>().ReduceHP(playerDamage);
         }
+
+        //power up the ship
+        if (other.gameObject.tag == "Item")
+        {
+            Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
+            Debug.Log("lvled up");
+            Destroy(gameObject);
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+     if (other.gameObject.tag == "Item")
+        {
+            //Debug.Log("lvled up");
+        }
+    }
+
 }
