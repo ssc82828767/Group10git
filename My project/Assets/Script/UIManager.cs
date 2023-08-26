@@ -37,7 +37,6 @@ public class ScoreText : MonoBehaviour
     // hp bar display
     private void HPstats()
     {
-        HPbar.fillAmount = hp / maxhp;
         player = GameObject.FindWithTag("Player");
         if (player == null)
         {
@@ -49,6 +48,7 @@ public class ScoreText : MonoBehaviour
             maxhp = player.GetComponent<Health>().maxhp;
             hp = player.GetComponent<Health>().hp;
         }
+        HPbar.fillAmount = hp / maxhp;
     }
 
     // more max health, longer the health bar
