@@ -21,9 +21,13 @@ public class EnemyController : MonoBehaviour
     {
         player = null;
         if (player == null)
+        {
             player = GameObject.FindWithTag("Player");
-
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedModifier * Time.deltaTime);
+            if (player != null)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedModifier * Time.deltaTime);
+            }
+        }
 
     }
 }

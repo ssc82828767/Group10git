@@ -10,22 +10,23 @@ public class ScoreText : MonoBehaviour
     private Text scoreText;
 
     //for the HP bar
-    public Image HPbar;
+    public Image HPbar, HPbar_BG;
+    public Text indicator;
     public float hp, maxhp;
     public GameObject player;
+    private int index; 
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText.text = "Score: " + PlayerController.score;
-
-        //maxhp = GameObject.FindWithTag("Player").GetComponent<Health>().hp;
     }
 
     // Update is called once per frame
     void Update()
     {
         HPstats();
+        HP_bar_length();
     }
 
     public void UpdateScore()
@@ -33,7 +34,7 @@ public class ScoreText : MonoBehaviour
         scoreText.text = "Score: " + PlayerController.score;
     }
 
-    // hp bar
+    // hp bar display
     private void HPstats()
     {
         HPbar.fillAmount = hp / maxhp;
@@ -45,8 +46,38 @@ public class ScoreText : MonoBehaviour
         }
         else
         {
-            maxhp = GameObject.FindWithTag("Player").GetComponent<Health>().maxhp;
+            maxhp = player.GetComponent<Health>().maxhp;
             hp = player.GetComponent<Health>().hp;
+        }
+    }
+
+    // more max health, longer the health bar
+    private void HP_bar_length()
+    {
+        if (player != null)
+        {
+            index = player.GetComponent<PlayerController>().tier;
+            indicator.text = index.ToString();
+        }
+        if (index ==1)
+        {
+            HPbar.transform.localScale = new Vector2(1f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(1f, 1f);
+        }
+        if (index == 2)
+        {
+            HPbar.transform.localScale = new Vector2(1.5f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(1.5f, 1f);
+        }
+        if (index == 3)
+        {
+            HPbar.transform.localScale = new Vector2(2f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(2f, 1f);
+        }
+        if (index == 4)
+        {
+            HPbar.transform.localScale = new Vector2(2.5f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(2.5f, 1f);
         }
     }
 }

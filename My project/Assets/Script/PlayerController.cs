@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Health health;
 
     public GameObject Next_tier;
+    public int tier;
 
     // Start is called before the first frame update
     void Start()

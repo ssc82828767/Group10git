@@ -107,6 +107,7 @@ MonoBehaviour:
   playerDamage: 10
   bulletCooldown: 0.3
   Next_tier: {fileID: 1309655579158373949, guid: d13b5723925aad243a3bf9d09453fd7c, type: 3}
+  tier: 1
 --- !u!60 &4001011285072374139
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
+  maxhp: 0
 --- !u!61 &777661819456938412
 BoxCollider2D:
   m_ObjectHideFlags: 0
