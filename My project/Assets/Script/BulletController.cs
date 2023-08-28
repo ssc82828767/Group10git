@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public int bulletSpeed = 30;
+    public int bulletSpeed = 100;
     public int lifespan = 5;
     public int bulletDamage = 1;
+    public string[] unaffectedTags;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +25,11 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {        
-        if(other.gameObject.tag != "Player")
-        { 
-            if (other.gameObject.tag != "Item" && other.gameObject.tag != "Bullet")
-            {
-                other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);
-                Destroy(gameObject);
-            }
+        Debug.Log(other.gameObject.name);
+        if(Array.IndexOf(unaffectedTags, other.gameObject.tag) < 0)
+        {
+            other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);
+            Destroy(gameObject);
         }
     }
 }

@@ -24,7 +24,12 @@ public class Health : MonoBehaviour
         hp -= damage;
         if(hp <= 0)
         {
+            if(transform.parent != null)
+            {
+                Destroy(transform.parent.gameObject);
+            }
             Destroy(gameObject);
+            Debug.Log(gameObject);
         }
     }
 }
