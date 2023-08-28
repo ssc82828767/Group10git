@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - UI
   - Item
+  - WeakSpot
+  - MiniBoss
   layers:
   - Default
   - TransparentFX
