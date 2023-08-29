@@ -42,8 +42,6 @@ public class MiniBossController : MonoBehaviour
                 player = GameObject.FindWithTag("Player");
                 if (player != null)
                 {
-                    Debug.Log(bulletPrimaryCooldownCurrent);
-                    Debug.Log(bulletSecondaryCooldownCurrent);
                     ShootBullet();
                 }
                 bulletSecondaryCooldownCurrent = 0;
@@ -71,5 +69,7 @@ public class MiniBossController : MonoBehaviour
     private void OnDestroy()
     {
         GameObject powerUpInstance = Instantiate(powerUp, transform.position, transform.rotation);
+
+        GameObject.FindWithTag("MainBoss").GetComponent<MainBossController>().NotifyMiniBossDestroyed();
     }
 }

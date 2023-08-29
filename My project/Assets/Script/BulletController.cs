@@ -25,7 +25,10 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {        
-        Debug.Log(other.gameObject.name);
+        if(other.gameObject.tag == "ForceField")
+        {
+            Destroy(gameObject);
+        }
         if(Array.IndexOf(unaffectedTags, other.gameObject.tag) < 0)
         {
             other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);

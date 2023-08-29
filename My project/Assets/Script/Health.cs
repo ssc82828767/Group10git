@@ -29,7 +29,6 @@ public class Health : MonoBehaviour
                 Destroy(transform.parent.gameObject);
             }
             Destroy(gameObject);
-            Debug.Log(gameObject);
         }
     }
 }

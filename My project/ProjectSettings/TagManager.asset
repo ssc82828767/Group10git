@@ -11,6 +11,8 @@ TagManager:
   - Item
   - WeakSpot
   - MiniBoss
+  - ForceField
+  - MainBoss
   layers:
   - Default
   - TransparentFX
