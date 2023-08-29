@@ -16,7 +16,6 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void ReduceHP(int damage)
@@ -29,7 +28,7 @@ public class Health : MonoBehaviour
                 Destroy(transform.parent.gameObject);
             }
             Destroy(gameObject);
-            Debug.Log(gameObject);
+            //Debug.Log(gameObject);
         }
     }
 }
