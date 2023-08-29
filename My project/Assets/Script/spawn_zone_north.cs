@@ -9,6 +9,7 @@ public class spawn_zone_north : MonoBehaviour
     public GameObject enemy1;
     public GameObject enemy2;
     public GameObject enemy3;
+    public GameObject enemy4;
     private GameObject player;
     public Vector3 offsetPos;
 
@@ -33,7 +34,7 @@ public class spawn_zone_north : MonoBehaviour
         spawnCD -= Time.deltaTime;
         if (spawnCD <= 0)
         {
-            enemy_index = Random.Range(1, 4);
+            enemy_index = Random.Range(1, 5);
             if (enemy_index == 1)
             {
                 enemy = enemy1;
@@ -45,6 +46,10 @@ public class spawn_zone_north : MonoBehaviour
             else if (enemy_index == 3)
             {
                 enemy = enemy3;
+            }
+            else if (enemy_index == 4)
+            {
+                enemy = enemy4;
             }
 
             Instantiate(enemy, new Vector3(

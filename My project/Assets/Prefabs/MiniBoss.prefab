@@ -239,7 +239,6 @@ MonoBehaviour:
   bulletSecondaryCooldown: 1
   bulletClusterSize: 3
   powerUp: {fileID: 5583981781479768822, guid: bb4c3e5bcb123c141abccea99b264f76, type: 3}
-  mainBoss: {fileID: 6441073357299765604, guid: 87fd449f64675394fa6962f6d03b974f, type: 3}
 --- !u!1 &5666131409576392804
 GameObject:
   m_ObjectHideFlags: 0
