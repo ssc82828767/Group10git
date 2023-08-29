@@ -6,10 +6,15 @@ public class MiniBossController : MonoBehaviour
 {
     public int bulletSpeed = 30;
     public GameObject bullet;
-    public float bulletCooldown = 3f;
-    public float bulletClusterCooldown = 1f;
+    public float bulletSecondaryCooldown = 1f;
+    public float bulletPrimaryCooldown = 5f;
+    public int bulletClusterSize = 3;
 
-    private float bulletCooldownCurrent = 0.0f;
+    public GameObject player;
+
+    private float bulletPrimaryCooldownCurrent = 0.0f;
+    private float bulletSecondaryCooldownCurrent = 0.0f;
+    private int bulletsShot = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,21 +30,40 @@ public class MiniBossController : MonoBehaviour
 
     void CheckBullet()
     {
-        bulletCooldownCurrent += Time.deltaTime;
-        if (bulletCooldownCurrent >= bulletCooldown)
+        //We use two cooldowns, one for firing a cluster and a second for the space between each bullet in a cluster
+        bulletPrimaryCooldownCurrent += Time.deltaTime;
+        bulletSecondaryCooldownCurrent += Time.deltaTime;
+        if (bulletPrimaryCooldownCurrent >= bulletPrimaryCooldown)
         {
             //In Bosconian the space stations shoot 1-3 bullets, I'll have it just shoot 3 in an interval.
-            //DOESNT WORK, SHOOTS CONSTANTLY
-            //InvokeRepeating("ShootBullet", 5, 3);
-            ShootBullet();
+            if (bulletSecondaryCooldownCurrent >= bulletSecondaryCooldown)
+            {
+                player = GameObject.FindWithTag("Player");
+                if (player != null)
+                {
+                    Debug.Log(bulletPrimaryCooldownCurrent);
+                    Debug.Log(bulletSecondaryCooldownCurrent);
+                    ShootBullet();
+                }
+                bulletSecondaryCooldownCurrent = 0;
+                bulletsShot++;
+            }
+            if (bulletsShot >= bulletClusterSize)
+            {
+                bulletsShot = 0;
+                bulletPrimaryCooldownCurrent = 0;
+            }
         }
     }
 
     void ShootBullet()
     {
-        GameObject bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
-        bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
-        bulletCooldownCurrent = 0.0f;
+        Vector3 directionToTarget = player.transform.position - transform.position;
+        float angle = Vector3.Angle(Vector3.up, directionToTarget);
+        if (player.transform.position.x > transform.position.x) angle *= -1;
+        Quaternion bulletRotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
+        GameObject bulletInstance = Instantiate(bullet, transform.position, bulletRotation);
+        bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
     }
 }
