@@ -233,11 +233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c22ef579529454ea6dd369ab834e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 30
   bullet: {fileID: 5883862051124386497, guid: 818b83e3c6c93994185a42bc16761dd6, type: 3}
-  bulletSecondaryCooldown: 1
+  bulletSpeed: 30
   bulletPrimaryCooldown: 5
+  bulletSecondaryCooldown: 1
   bulletClusterSize: 3
+  powerUp: {fileID: 5583981781479768822, guid: bb4c3e5bcb123c141abccea99b264f76, type: 3}
   player: {fileID: 0}
 --- !u!1 &5666131409576392804
 GameObject:

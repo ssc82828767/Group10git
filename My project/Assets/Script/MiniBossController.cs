@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class MiniBossController : MonoBehaviour
 {
-    public int bulletSpeed = 30;
     public GameObject bullet;
-    public float bulletSecondaryCooldown = 1f;
+    public int bulletSpeed = 30;
     public float bulletPrimaryCooldown = 5f;
+    public float bulletSecondaryCooldown = 1f;
     public int bulletClusterSize = 3;
 
-    public GameObject player;
+    public GameObject powerUp;
 
+    private GameObject player;
     private float bulletPrimaryCooldownCurrent = 0.0f;
     private float bulletSecondaryCooldownCurrent = 0.0f;
     private int bulletsShot = 0;
@@ -19,7 +20,7 @@ public class MiniBossController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletPrimaryCooldownCurrent += Random.Range(-5.0f, 4.0f);
     }
 
     // Update is called once per frame
@@ -65,5 +66,10 @@ public class MiniBossController : MonoBehaviour
 
         GameObject bulletInstance = Instantiate(bullet, transform.position, bulletRotation);
         bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+    }
+
+    private void OnDestroy()
+    {
+        GameObject powerUpInstance = Instantiate(powerUp, transform.position, transform.rotation);
     }
 }

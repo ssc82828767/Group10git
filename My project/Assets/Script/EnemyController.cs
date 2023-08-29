@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     public int speedModifier = 8;
 
-    public GameObject player;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
