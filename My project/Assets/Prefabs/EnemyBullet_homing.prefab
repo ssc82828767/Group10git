@@ -103,7 +103,10 @@ MonoBehaviour:
   bulletSpeed: 30
   lifespan: 5
   bulletDamage: 1
-  unaffectedTags: []
+  unaffectedTags:
+  - Enemy
+  - MiniBoss
+  - WeakSpot
 --- !u!114 &719931731416051690
 MonoBehaviour:
   m_ObjectHideFlags: 0
