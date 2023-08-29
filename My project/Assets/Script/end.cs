@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class end : MonoBehaviour
 {
@@ -24,5 +25,10 @@ public class end : MonoBehaviour
             //this.gameObject.SetActive(false);
         }
 
+    }
+
+    public void return_menu()
+    {
+        SceneManager.LoadScene("Start Menu");
     }
 }

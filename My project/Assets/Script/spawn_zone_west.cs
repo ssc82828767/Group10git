@@ -52,7 +52,7 @@ public class spawn_zone_west : MonoBehaviour
                 Random.Range(-ySize / 2, ySize / 2) + transform.position.y,
                 0
             ), Quaternion.identity);
-            spawnCD = Random.Range(2, 6);
+            spawnCD = Random.Range(3, 7);
             //enemy = null;
         }
 
