@@ -122,4 +122,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+    }
+
 }
