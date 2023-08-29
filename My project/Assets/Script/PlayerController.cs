@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -110,7 +111,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Item")
         {
             Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
-            Debug.Log("lvled up");
             Destroy(gameObject);
         }
     }
@@ -121,6 +121,11 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("lvled up");
         }
+    }
+
+    private void OnDestroy()
+    {
+        //SceneManager.LoadScene("Start Menu");
     }
 
 }
