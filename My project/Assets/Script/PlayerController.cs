@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.LoadScene("Start Menu");
+        //SceneManager.LoadScene("Start Menu");
     }
 
 }
