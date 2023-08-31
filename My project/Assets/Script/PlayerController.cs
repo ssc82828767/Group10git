@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public static int score = 0;
-
     public int speedModifier = 10;
     public int bulletSpeed = 30;
     public GameObject bullet;
@@ -21,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public int tier;
 
     private Item_Powerup item1;
+    private int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -99,6 +98,13 @@ public class PlayerController : MonoBehaviour
             bulletCooldownCurrent = 0.0f;
         }
     }
+
+    void addScore(int points)
+    {
+        score += points;
+    }
+
+    int getScore() { return score; }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
