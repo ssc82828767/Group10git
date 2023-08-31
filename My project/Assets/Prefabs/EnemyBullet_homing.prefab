@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 719931731416051690}
   - component: {fileID: 3196161815015493005}
   - component: {fileID: -8933153277589603213}
+  - component: {fileID: 248438773088467991}
+  - component: {fileID: -4916316258375755396}
   m_Layer: 0
   m_Name: EnemyBullet_homing
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,11 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 50
   lifespan: 10
-  bulletDamage: 1
-  unaffectedTags:
-  - Enemy
-  - MiniBoss
-  - WeakSpot
 --- !u!61 &3196161815015493005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,3 +195,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &248438773088467991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883862051124386497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d06214c16d59c1439731a1006a16fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
+  unaffectedTags:
+  - MiniBoss
+  - WeakSpot
+--- !u!114 &-4916316258375755396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883862051124386497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  maxhp: 0

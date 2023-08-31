@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class EnemyController : MonoBehaviour
     public int speedModifier = 8;
 
     private GameObject player;
+    public GameObject itemdrop;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +25,10 @@ public class EnemyController : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speedModifier * Time.deltaTime);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(itemdrop, transform.position, transform.rotation);
     }
 }

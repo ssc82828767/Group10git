@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4127456375136930193}
-  - component: {fileID: 1227053905425023941}
+  - component: {fileID: -7639852810449123731}
   m_Layer: 0
   m_Name: spawn_north
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1227053905425023941
+--- !u!114 &-7639852810449123731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8503872698868429935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1794ec338c66ba147ae731a62829e86e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f9293c57dd30ec4ba5aabecfdf6112d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xSize: 150
@@ -50,4 +50,6 @@ MonoBehaviour:
   enemy1: {fileID: 8741065294560239597, guid: 16f7ec5d7b7896a428b1036925e559e4, type: 3}
   enemy2: {fileID: 8741065294560239597, guid: 13c045e94ab812f4986cd389a68c1387, type: 3}
   enemy3: {fileID: 8741065294560239597, guid: 0cdac3d35546dfa4abb1ff14e966628b, type: 3}
-  offsetPos: {x: 0, y: 0, z: 0}
+  enemy4: {fileID: 8741065294560239597, guid: 0cc77f1291a44e34cae06de9cf804117, type: 3}
+  enemy5: {fileID: 8741065294560239597, guid: bea266cfbfb0d8e44a9f441de691666a, type: 3}
+  offsetPos: {x: 0, y: 70, z: 0}

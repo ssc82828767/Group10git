@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public GameObject Next_tier;
     public int tier;
 
+    private Item_Powerup item1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,18 +102,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Damage otherDamage = other.gameObject.GetComponent<Damage>();
-        if (otherDamage)
-        {
-            health.ReduceHP(otherDamage.value);
-            other.gameObject.GetComponent<Health>().ReduceHP(playerDamage);
-        }
+        //Damage otherDamage = other.gameObject.GetComponent<Damage>();
+        //if (otherDamage)
+        //{
+        //    health.ReduceHP(otherDamage.value);
+        //    other.gameObject.GetComponent<Health>().ReduceHP(playerDamage);
+        //}
 
         //power up the ship
         if (other.gameObject.tag == "Item")
         {
-            Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+            item1 = other.GetComponent<Item_Powerup>();
+            if (item1 != null)
+            {
+                Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 

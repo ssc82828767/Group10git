@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4959843727695680711}
   - component: {fileID: -2050518655410059590}
-  - component: {fileID: 5259338969374360511}
-  - component: {fileID: 8952004100224279271}
+  - component: {fileID: -1361362514364639972}
   - component: {fileID: 1805505953402656102}
   - component: {fileID: -1007874469577103314}
   - component: {fileID: -3893709411964874566}
   - component: {fileID: 6023838344380221538}
+  - component: {fileID: -3172515134973843272}
   m_Layer: 0
   m_Name: Enemy_4
   m_TagString: Enemy
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5259338969374360511
+--- !u!114 &-1361362514364639972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,37 +99,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8741065294560239597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9327d97f6734edc4b876c32e940073f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f6c7174427a04a47b5257bcce85491c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 15
---- !u!50 &8952004100224279271
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8741065294560239597}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  speedModifier: 20
+  bullet: {fileID: 5883862051124386497, guid: b9743319fc51b004d96efdf1ec79c928, type: 3}
+  bulletSpeed: 30
+  bulletPrimaryCooldown: 6
+  bulletSecondaryCooldown: 1
+  bulletClusterSize: 1
 --- !u!114 &1805505953402656102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +135,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  unaffectedTags:
+  - MiniBoss
+  - WeakSpot
+  - Enemy
+  - Item
 --- !u!114 &-3893709411964874566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,3 +188,30 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.17090183
+--- !u!50 &-3172515134973843272
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741065294560239597}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

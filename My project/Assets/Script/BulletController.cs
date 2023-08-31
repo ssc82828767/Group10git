@@ -8,8 +8,7 @@ public class BulletController : MonoBehaviour
 {
     public int bulletSpeed = 100;
     public int lifespan = 5;
-    public int bulletDamage = 1;
-    public string[] unaffectedTags;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +26,6 @@ public class BulletController : MonoBehaviour
     {        
         if(other.gameObject.tag == "ForceField")
         {
-            Destroy(gameObject);
-        }
-        if(Array.IndexOf(unaffectedTags, other.gameObject.tag) < 0)
-        {
-            other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);
             Destroy(gameObject);
         }
     }

@@ -8,6 +8,8 @@ public class ScoreText : MonoBehaviour
 {
     [SerializeField]
     private Text scoreText;
+    public Text scoreText2;
+    public Text scoreText3;
 
     //for the HP bar
     public Image HPbar, HPbar_BG;
@@ -27,6 +29,8 @@ public class ScoreText : MonoBehaviour
     {
         HPstats();
         HP_bar_length();
+        scoreText2.text = scoreText.text;
+        scoreText3.text = scoreText.text;
     }
 
     public void UpdateScore()

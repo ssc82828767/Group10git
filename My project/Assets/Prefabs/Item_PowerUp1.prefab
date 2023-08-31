@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4829574630325366637}
   - component: {fileID: 8586637405232095082}
   - component: {fileID: -3184357095246813943}
-  - component: {fileID: 4387230278526318137}
   m_Layer: 0
   m_Name: Item_PowerUp1
   m_TagString: Item
@@ -172,16 +171,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4387230278526318137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5583981781479768822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
