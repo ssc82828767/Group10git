@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniBossCount: 3
   forceField: {fileID: 2572192010378241301, guid: e9afbe10533d77c468d06f1abd4d37e2, type: 3}
-  turnSpeed: 10
+  timeBetweenAttacks: 6
 --- !u!60 &7349899722445507317
 PolygonCollider2D:
   m_ObjectHideFlags: 0
