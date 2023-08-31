@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedModifier: 6
-  bullet: {fileID: 3602120311693468385, guid: 3347350c9389ade478075280649b6670, type: 3}
+  bullet: {fileID: 5883862051124386497, guid: 818b83e3c6c93994185a42bc16761dd6, type: 3}
   bulletSpeed: 50
   bulletPrimaryCooldown: 2
   bulletSecondaryCooldown: 0.5

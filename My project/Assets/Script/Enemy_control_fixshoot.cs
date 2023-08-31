@@ -62,8 +62,8 @@ public class Enemy_control_fixshoot : MonoBehaviour
     void ShootBullet()
     {
         GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4, transform.rotation);
-        GameObject bulletInstance3 = Instantiate(bullet, transform.position + Vector3.left * 7, transform.rotation * Quaternion.AngleAxis(105, Vector3.forward));
-        GameObject bulletInstance4 = Instantiate(bullet, transform.position + Vector3.right * 7, transform.rotation * Quaternion.AngleAxis(257, Vector3.forward));
+        GameObject bulletInstance3 = Instantiate(bullet, transform.position + Vector3.left * 7, transform.rotation * Quaternion.AngleAxis(90, Vector3.forward));
+        GameObject bulletInstance4 = Instantiate(bullet, transform.position + Vector3.right * 7, transform.rotation * Quaternion.AngleAxis(-90, Vector3.forward));
         GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
         bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
         bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
