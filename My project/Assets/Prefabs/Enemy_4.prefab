@@ -140,6 +140,7 @@ MonoBehaviour:
   - WeakSpot
   - Enemy
   - Item
+  - EnemyBullet
 --- !u!114 &-3893709411964874566
 MonoBehaviour:
   m_ObjectHideFlags: 0

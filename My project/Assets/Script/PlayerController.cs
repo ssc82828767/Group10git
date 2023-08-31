@@ -19,12 +19,13 @@ public class PlayerController : MonoBehaviour
     public int tier;
 
     private Item_Powerup item1;
-    private int score = 0;
+    private int score;
 
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<Health>();
+        score = 0;
     }
 
     // Update is called once per frame

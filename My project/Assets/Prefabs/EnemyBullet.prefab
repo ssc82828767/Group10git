@@ -191,6 +191,9 @@ MonoBehaviour:
   unaffectedTags:
   - MiniBoss
   - WeakSpot
+  - Enemy
+  - Item
+  - EnemyBullet
 --- !u!114 &-1272344687264762953
 MonoBehaviour:
   m_ObjectHideFlags: 0
