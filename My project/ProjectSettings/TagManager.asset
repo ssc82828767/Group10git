@@ -13,6 +13,7 @@ TagManager:
   - MiniBoss
   - ForceField
   - MainBoss
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
