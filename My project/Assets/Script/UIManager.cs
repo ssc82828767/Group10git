@@ -21,7 +21,7 @@ public class ScoreText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = "Score: " + PlayerController.score;
+        scoreText.text = "Score: " + player.GetComponent<PlayerController>().getScore();
     }
 
     // Update is called once per frame
@@ -35,7 +35,9 @@ public class ScoreText : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreText.text = "Score: " + PlayerController.score;
+        player = GameObject.FindWithTag("Player");
+        
+        scoreText.text = "Score: " + player.GetComponent<PlayerController>().getScore();
     }
 
     // hp bar display

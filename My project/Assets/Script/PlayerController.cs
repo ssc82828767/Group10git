@@ -99,12 +99,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void addScore(int points)
+    public void addScore(int points)
     {
         score += points;
     }
 
-    int getScore() { return score; }
+    public int getScore() { return score; }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
