@@ -100,12 +100,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Damage otherDamage = other.gameObject.GetComponent<Damage>();
-        if (otherDamage)
-        {
-            health.ReduceHP(otherDamage.value);
-            other.gameObject.GetComponent<Health>().ReduceHP(playerDamage);
-        }
+        //Damage otherDamage = other.gameObject.GetComponent<Damage>();
+        //if (otherDamage)
+        //{
+        //    health.ReduceHP(otherDamage.value);
+        //    other.gameObject.GetComponent<Health>().ReduceHP(playerDamage);
+        //}
 
         //power up the ship
         if (other.gameObject.tag == "Item")
