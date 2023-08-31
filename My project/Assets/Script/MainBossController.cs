@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
@@ -10,6 +11,7 @@ public class MainBossController : MonoBehaviour
 
     private int miniBossesDestroyed = 0;
     private GameObject forceFieldRef;
+    private bool spinning = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class MainBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (forceFieldRef == null ) 
+        if (forceFieldRef == null && spinning) 
         {
             RotateAwayFrom(GameObject.FindWithTag("Player"));
         }
