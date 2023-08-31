@@ -204,3 +204,4 @@ MonoBehaviour:
   value: 1
   unaffectedTags:
   - Player
+  - Item

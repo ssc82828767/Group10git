@@ -10,14 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4959843727695680711}
   - component: {fileID: -2050518655410059590}
-  - component: {fileID: 5259338969374360511}
-  - component: {fileID: 8952004100224279271}
+  - component: {fileID: -5957342680167975917}
   - component: {fileID: 1805505953402656102}
   - component: {fileID: -1007874469577103314}
   - component: {fileID: -3893709411964874566}
   - component: {fileID: 6023838344380221538}
   m_Layer: 0
-  m_Name: Enemy_2
+  m_Name: Enemy_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 0.6}
+  m_LocalScale: {x: 35, y: 35, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70de6d5baf6f06f4e9b327794c4f8eb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47120d6f57109374fb0cb3b52625fa22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5259338969374360511
+--- !u!114 &-5957342680167975917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,35 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9327d97f6734edc4b876c32e940073f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 25
-  itemdrop: {fileID: 0}
---- !u!50 &8952004100224279271
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8741065294560239597}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  speedModifier: 8
+  itemdrop: {fileID: 5583981781479768822, guid: cfaaeb87231875c4582b6503e7f74b31, type: 3}
 --- !u!114 &1805505953402656102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
-  maxhp: 1
+  hp: 5
+  maxhp: 0
 --- !u!114 &-1007874469577103314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d06214c16d59c1439731a1006a16fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  value: 10
   unaffectedTags:
   - MiniBoss
   - WeakSpot
@@ -175,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c54fe0548502c74783b34efadbf4a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 50
+  score: 100
 --- !u!58 &6023838344380221538
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -208,6 +180,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0075474167}
+  m_Offset: {x: -0.005, y: -0.01}
   serializedVersion: 2
-  m_Radius: 0.17090183
+  m_Radius: 0.16

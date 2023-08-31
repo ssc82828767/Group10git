@@ -50,4 +50,6 @@ MonoBehaviour:
   enemy1: {fileID: 8741065294560239597, guid: 16f7ec5d7b7896a428b1036925e559e4, type: 3}
   enemy2: {fileID: 8741065294560239597, guid: 13c045e94ab812f4986cd389a68c1387, type: 3}
   enemy3: {fileID: 8741065294560239597, guid: 0cdac3d35546dfa4abb1ff14e966628b, type: 3}
-  offsetPos: {x: 0, y: 0, z: 0}
+  enemy4: {fileID: 8741065294560239597, guid: 0cc77f1291a44e34cae06de9cf804117, type: 3}
+  enemy5: {fileID: 8741065294560239597, guid: bea266cfbfb0d8e44a9f441de691666a, type: 3}
+  offsetPos: {x: 100, y: 0, z: 0}

@@ -190,6 +190,7 @@ MonoBehaviour:
   value: 3
   unaffectedTags:
   - Player
+  - Item
 --- !u!114 &1705172588790669580
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public GameObject Next_tier;
     public int tier;
 
+    private Item_Powerup item1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,8 +112,14 @@ public class PlayerController : MonoBehaviour
         //power up the ship
         if (other.gameObject.tag == "Item")
         {
-            Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+            item1 = other.GetComponent<Item_Powerup>();
+            if (item1 != null)
+            {
+                Instantiate(Next_tier, gameObject.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 

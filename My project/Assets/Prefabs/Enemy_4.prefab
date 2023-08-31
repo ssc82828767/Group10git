@@ -139,6 +139,7 @@ MonoBehaviour:
   - MiniBoss
   - WeakSpot
   - Enemy
+  - Item
 --- !u!114 &-3893709411964874566
 MonoBehaviour:
   m_ObjectHideFlags: 0

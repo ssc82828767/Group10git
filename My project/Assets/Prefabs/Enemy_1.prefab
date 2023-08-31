@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedModifier: 15
+  itemdrop: {fileID: 0}
 --- !u!50 &8952004100224279271
 Rigidbody2D:
   serializedVersion: 4
@@ -161,6 +162,7 @@ MonoBehaviour:
   - MiniBoss
   - WeakSpot
   - Enemy
+  - Item
 --- !u!114 &-3893709411964874566
 MonoBehaviour:
   m_ObjectHideFlags: 0
