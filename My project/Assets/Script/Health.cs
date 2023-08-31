@@ -29,5 +29,24 @@ public class Health : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        showDamage();
+    }
+
+    private void showDamage()
+    {
+        setSpriteColorRed();
+        Invoke(nameof(setSpriteColorWhite), .1f);
+        Invoke(nameof(setSpriteColorRed), .2f);
+        Invoke(nameof(setSpriteColorWhite), .3f);
+    }
+
+    private void setSpriteColorRed()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+    }
+
+    private void setSpriteColorWhite()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

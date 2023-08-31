@@ -13,6 +13,7 @@ public class Start_Menu : MonoBehaviour
 
     public void StartGame()
     {
+        PlayerController.score = 0;
         SceneManager.LoadScene("Scene_Base");
     }
 

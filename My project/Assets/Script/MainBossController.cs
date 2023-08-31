@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
@@ -7,9 +8,11 @@ public class MainBossController : MonoBehaviour
 {
     public int miniBossCount = 3;
     public GameObject forceField;
+    public int timeBetweenAttacks = 4;
 
     private int miniBossesDestroyed = 0;
     private GameObject forceFieldRef;
+    private bool spinning = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class MainBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (forceFieldRef == null ) 
+        if (forceFieldRef == null && spinning) 
         {
             RotateAwayFrom(GameObject.FindWithTag("Player"));
         }
@@ -32,10 +35,17 @@ public class MainBossController : MonoBehaviour
         if(miniBossesDestroyed >= miniBossCount)
         {
             Destroy(forceFieldRef);
+            Invoke(nameof(BossAttackPattern), timeBetweenAttacks);
         }
     }
 
-    private void RotateAwayFrom(GameObject target)
+    void BossAttackPattern()
+    {
+        spinning = !spinning;
+        Invoke(nameof(BossAttackPattern), timeBetweenAttacks);
+    }
+
+    void RotateAwayFrom(GameObject target)
     {
         Vector3 directionToTarget = target.transform.position - transform.position;
         float angle = Vector3.Angle(Vector3.up, directionToTarget);

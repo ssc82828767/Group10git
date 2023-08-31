@@ -22,7 +22,7 @@ public class Score : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().addScore(score);
+        PlayerController.score += score;
         GameObject.Find("Canvas").GetComponent<ScoreText>().UpdateScore();
     }
 }
