@@ -194,6 +194,7 @@ MonoBehaviour:
   - Enemy
   - Item
   - EnemyBullet
+  - MainBoss
 --- !u!114 &-1272344687264762953
 MonoBehaviour:
   m_ObjectHideFlags: 0

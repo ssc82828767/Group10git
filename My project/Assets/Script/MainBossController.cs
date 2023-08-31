@@ -10,9 +10,14 @@ public class MainBossController : MonoBehaviour
     public GameObject forceField;
     public int timeBetweenAttacks = 4;
 
+    public GameObject bullet;
+    public int bulletSpeed = 30;
+    public float bulletCooldown = 1f;
+
     private int miniBossesDestroyed = 0;
     private GameObject forceFieldRef;
     private bool spinning = true;
+    private float bulletCooldownCurrent = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +31,12 @@ public class MainBossController : MonoBehaviour
         if (forceFieldRef == null && spinning) 
         {
             RotateAwayFrom(GameObject.FindWithTag("Player"));
+            bulletCooldownCurrent += Time.deltaTime;
+            if (bulletCooldownCurrent >= bulletCooldown)
+            {
+                ShootInCircle();
+                bulletCooldownCurrent = 0;
+            }
         }
     }
 
@@ -35,14 +46,36 @@ public class MainBossController : MonoBehaviour
         if(miniBossesDestroyed >= miniBossCount)
         {
             Destroy(forceFieldRef);
-            Invoke(nameof(BossAttackPattern), timeBetweenAttacks);
+            Invoke(nameof(StopStartSpinning), timeBetweenAttacks);
         }
     }
 
-    void BossAttackPattern()
+    void StopStartSpinning()
     {
         spinning = !spinning;
-        Invoke(nameof(BossAttackPattern), timeBetweenAttacks);
+        Invoke(nameof(StopStartSpinning), timeBetweenAttacks);
+    }
+
+    void ShootInCircle()
+    {
+        Debug.Log("Shooting");
+        GameObject bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
+        GameObject bulletInstance2 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+        GameObject bulletInstance3 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(90, Vector3.forward));
+        GameObject bulletInstance4 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-90, Vector3.forward));
+        GameObject bulletInstance5 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(135, Vector3.forward));
+        GameObject bulletInstance6 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(45, Vector3.forward));
+        GameObject bulletInstance7 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-45, Vector3.forward));
+        GameObject bulletInstance8 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-135, Vector3.forward));
+
+        bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance4.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance7.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+        bulletInstance8.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
     }
 
     void RotateAwayFrom(GameObject target)
@@ -55,6 +88,5 @@ public class MainBossController : MonoBehaviour
 
         // Rotate the game object.
         transform.rotation = Quaternion.Slerp(transform.rotation, awayRotation, Time.deltaTime);
-        Debug.Log(Time.deltaTime);
     }
 }

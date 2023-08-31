@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c54fe0548502c74783b34efadbf4a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 1000
+  score: 500
 --- !u!61 &3035949611427550620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 2
   maxhp: 0
 --- !u!114 &889155745647752843
 MonoBehaviour:

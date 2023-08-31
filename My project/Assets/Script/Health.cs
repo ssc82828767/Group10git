@@ -42,11 +42,22 @@ public class Health : MonoBehaviour
 
     private void setSpriteColorRed()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null) 
+        { 
+            spriteRenderer = gameObject.GetComponentInParent<SpriteRenderer>();
+            Debug.Log(spriteRenderer);
+        }
+        spriteRenderer.color = Color.red;
     }
 
     private void setSpriteColorWhite()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = gameObject.GetComponentInParent<SpriteRenderer>();
+        }
+        spriteRenderer.color = Color.white;
     }
 }

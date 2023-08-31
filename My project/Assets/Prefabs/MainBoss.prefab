@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4858876317777064587}
   - component: {fileID: 8830747758841109584}
   - component: {fileID: 7349899722445507317}
+  - component: {fileID: -343042278035317454}
   m_Layer: 0
   m_Name: MainBoss
   m_TagString: MainBoss
@@ -101,7 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 100
-  unaffectedTags: []
+  unaffectedTags:
+  - EnemyBullet
 --- !u!114 &8830747758841109584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +119,9 @@ MonoBehaviour:
   miniBossCount: 3
   forceField: {fileID: 2572192010378241301, guid: e9afbe10533d77c468d06f1abd4d37e2, type: 3}
   timeBetweenAttacks: 6
+  bullet: {fileID: 5883862051124386497, guid: 818b83e3c6c93994185a42bc16761dd6, type: 3}
+  bulletSpeed: 30
+  bulletCooldown: 1
 --- !u!60 &7349899722445507317
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -175,6 +180,19 @@ PolygonCollider2D:
       - {x: -0.12, y: 0.09}
       - {x: -0.1, y: 0.26}
   m_UseDelaunayMesh: 0
+--- !u!114 &-343042278035317454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441073357299765604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c54fe0548502c74783b34efadbf4a42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 1000
 --- !u!1 &6477895485206474894
 GameObject:
   m_ObjectHideFlags: 0
