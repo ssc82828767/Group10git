@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4959843727695680711}
   - component: {fileID: -2050518655410059590}
-  - component: {fileID: 388964368037314282}
+  - component: {fileID: 7150722001515714283}
   - component: {fileID: 1805505953402656102}
   - component: {fileID: -1007874469577103314}
   - component: {fileID: -3893709411964874566}
   - component: {fileID: 6696441271467090626}
   m_Layer: 0
-  m_Name: Enemy_7
+  m_Name: Enemy_8
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 55, y: 55, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9f4662fce817078458c859f3eb76a0b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 526efbe107854e24184525de84801409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &388964368037314282
+--- !u!114 &7150722001515714283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8741065294560239597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78cdc297c90cc054b872cb1bd9077bc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 789d3ef4bfb8bf94089f487a9b171daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speedModifier: 6
@@ -185,16 +185,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013834283, y: 0.004882641}
+  m_Offset: {x: 0.0005816817, y: 0.004882619}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.42, y: 0.42}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20027936, y: 0.4102347}
+  m_Size: {x: 0.29184294, y: 0.32589993}
   m_EdgeRadius: 0
