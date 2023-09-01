@@ -205,3 +205,4 @@ MonoBehaviour:
   unaffectedTags:
   - Player
   - Item
+  - Bullet

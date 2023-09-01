@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4959843727695680711}
   - component: {fileID: -2050518655410059590}
-  - component: {fileID: 7150722001515714283}
+  - component: {fileID: 2197679164887031798}
   - component: {fileID: 1805505953402656102}
   - component: {fileID: -1007874469577103314}
   - component: {fileID: -3893709411964874566}
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7150722001515714283
+--- !u!114 &2197679164887031798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,15 +98,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8741065294560239597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 789d3ef4bfb8bf94089f487a9b171daa, type: 3}
+  m_Script: {fileID: 11500000, guid: ae5e7a80579c9734baf6ba191aa3b6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 6
-  bullet: {fileID: 5883862051124386497, guid: 818b83e3c6c93994185a42bc16761dd6, type: 3}
-  bulletSpeed: 50
-  bulletPrimaryCooldown: 2
-  bulletSecondaryCooldown: 0.5
-  bulletClusterSize: 3
+  speedModifier: 10
+  bullet: {fileID: 133829085441997928, guid: a569866ab95f6b94ab7901af7113d12d, type: 3}
+  bulletSpeed: 0
+  bulletPrimaryCooldown: 5
+  bulletSecondaryCooldown: 1
+  bulletClusterSize: 1
 --- !u!114 &1805505953402656102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
+  hp: 10
   maxhp: 0
 --- !u!114 &-1007874469577103314
 MonoBehaviour:
@@ -140,6 +140,7 @@ MonoBehaviour:
   - Enemy
   - Item
   - EnemyBullet
+  - Asteroid
 --- !u!114 &-3893709411964874566
 MonoBehaviour:
   m_ObjectHideFlags: 0

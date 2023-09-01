@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789d3ef4bfb8bf94089f487a9b171daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 6
+  speedModifier: 7
   bullet: {fileID: 5883862051124386497, guid: 818b83e3c6c93994185a42bc16761dd6, type: 3}
   bulletSpeed: 50
   bulletPrimaryCooldown: 2
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
+  hp: 7
   maxhp: 0
 --- !u!114 &-1007874469577103314
 MonoBehaviour:

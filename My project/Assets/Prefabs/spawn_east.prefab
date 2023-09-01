@@ -47,9 +47,15 @@ MonoBehaviour:
   xSize: 50
   ySize: 100
   zSize: 0
+  enemy0: {fileID: 8741065294560239597, guid: bea266cfbfb0d8e44a9f441de691666a, type: 3}
   enemy1: {fileID: 8741065294560239597, guid: 16f7ec5d7b7896a428b1036925e559e4, type: 3}
   enemy2: {fileID: 8741065294560239597, guid: 13c045e94ab812f4986cd389a68c1387, type: 3}
   enemy3: {fileID: 8741065294560239597, guid: 0cdac3d35546dfa4abb1ff14e966628b, type: 3}
   enemy4: {fileID: 8741065294560239597, guid: 0cc77f1291a44e34cae06de9cf804117, type: 3}
-  enemy5: {fileID: 8741065294560239597, guid: bea266cfbfb0d8e44a9f441de691666a, type: 3}
+  enemy5: {fileID: 8741065294560239597, guid: 7bb7b2e917c77b04fa5cd32b1ac7569d, type: 3}
+  enemy6: {fileID: 8741065294560239597, guid: 03c4e2d97bd6c774cafffa7f3967ceed, type: 3}
+  enemy7: {fileID: 8741065294560239597, guid: 9dd7b2addae3f694da84dfe1bc1f1c2a, type: 3}
+  enemy8: {fileID: 8741065294560239597, guid: 23e0f733bcda2b542b69a5e6470ae3c8, type: 3}
+  enemy9: {fileID: 8741065294560239597, guid: ea07b5f276706f44ea2adff03812d720, type: 3}
   offsetPos: {x: -100, y: 0, z: 0}
+  tier_indicator: 0

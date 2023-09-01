@@ -34,8 +34,25 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         SetAngle();
-        ShootBullet();
         transform.position = transform.position + transform.up * Time.deltaTime * speedModifier;
+
+        //power up the bullets shootting
+        if (tier == 1)
+        {
+            ShootBullet();
+        }
+        else if (tier == 2)
+        {
+            ShootBullet2();
+        }
+        else if (tier == 3)
+        {
+            ShootBullet3();
+        }
+        else if (tier == 4)
+        {
+            ShootBullet4();
+        }
     }
 
     void SetAngle()
@@ -98,6 +115,64 @@ public class PlayerController : MonoBehaviour
             GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletCooldownCurrent = 0.0f;
+        }
+    }
+    void ShootBullet2()
+    {
+        bulletCooldownCurrent += Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        {
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation);
+            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance4.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletCooldownCurrent = 0.0f;
+        }
+    }
+    void ShootBullet3()
+    {
+        bulletCooldownCurrent += Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        {
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation);
+            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            //sideway
+            GameObject bulletInstance5 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(30, Vector3.forward));
+            GameObject bulletInstance6 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(-30, Vector3.forward));
+            bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance4.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletCooldownCurrent = 0.0f;
+        }
+    }
+    void ShootBullet4()
+    {
+        bulletCooldownCurrent += Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        {
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation);
+            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            //sideway
+            GameObject bulletInstance5 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(30, Vector3.forward));
+            GameObject bulletInstance6 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(-30, Vector3.forward));
+            bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance4.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
+            bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
         }
     }

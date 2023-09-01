@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9327d97f6734edc4b876c32e940073f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 8
+  speedModifier: 15
   itemdrop: {fileID: 5583981781479768822, guid: cfaaeb87231875c4582b6503e7f74b31, type: 3}
 --- !u!114 &1805505953402656102
 MonoBehaviour:
