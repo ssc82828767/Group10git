@@ -123,10 +123,10 @@ public class PlayerController : MonoBehaviour
         bulletCooldownCurrent += Time.deltaTime;
         if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
         {
-            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation);
-            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
-            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation);
-            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * -2, transform.rotation);
+            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
@@ -139,13 +139,13 @@ public class PlayerController : MonoBehaviour
         bulletCooldownCurrent += Time.deltaTime;
         if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
         {
-            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation);
-            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
-            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation);
-            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * -2, transform.rotation);
+            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
             //sideway
-            GameObject bulletInstance5 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(30, Vector3.forward));
-            GameObject bulletInstance6 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(-30, Vector3.forward));
+            GameObject bulletInstance5 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * -2, transform.rotation * Quaternion.AngleAxis(30, Vector3.forward));
+            GameObject bulletInstance6 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(-30, Vector3.forward));
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
@@ -160,13 +160,13 @@ public class PlayerController : MonoBehaviour
         bulletCooldownCurrent += Time.deltaTime;
         if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
         {
-            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation);
-            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
-            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation);
-            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation);
+            GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
+            GameObject bulletInstance3 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * -2, transform.rotation);
+            GameObject bulletInstance4 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * -2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
             //sideway
-            GameObject bulletInstance5 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * -2, transform.rotation * Quaternion.AngleAxis(30, Vector3.forward));
-            GameObject bulletInstance6 = Instantiate(bullet, transform.position + transform.up * 4 + Vector3.left * 2, transform.rotation * Quaternion.AngleAxis(-30, Vector3.forward));
+            GameObject bulletInstance5 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * -2, transform.rotation * Quaternion.AngleAxis(30, Vector3.forward));
+            GameObject bulletInstance6 = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(-30, Vector3.forward));
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;

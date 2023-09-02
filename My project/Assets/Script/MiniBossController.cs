@@ -12,6 +12,8 @@ public class MiniBossController : MonoBehaviour
 
     public GameObject powerUp;
 
+    public GameObject tether;
+
     private GameObject player;
     private float bulletPrimaryCooldownCurrent = 0.0f;
     private float bulletSecondaryCooldownCurrent = 0.0f;
@@ -68,6 +70,8 @@ public class MiniBossController : MonoBehaviour
 
     private void OnDestroy()
     {
+        GameObject.Destroy(tether);
+
         GameObject powerUpInstance = Instantiate(powerUp, transform.position, transform.rotation);
 
         GameObject.FindWithTag("MainBoss").GetComponent<MainBossController>().NotifyMiniBossDestroyed();
