@@ -8,11 +8,15 @@ public class MainBossController : MonoBehaviour
 {
     public int miniBossCount = 3;
     public GameObject forceField;
-    public int timeBetweenAttacks = 4;
+    public float attackDuration = 4f;
+    public float restDuration = 5f;
 
     public GameObject bullet;
     public int bulletSpeed = 30;
     public float bulletCooldown = 1f;
+
+    public Sprite ReducedForceField1;
+    public Sprite ReducedForceField2;
 
     private int miniBossesDestroyed = 0;
     private GameObject forceFieldRef;
@@ -46,14 +50,29 @@ public class MainBossController : MonoBehaviour
         if(miniBossesDestroyed >= miniBossCount)
         {
             Destroy(forceFieldRef);
-            Invoke(nameof(StopStartSpinning), timeBetweenAttacks);
+            Invoke(nameof(StopStartSpinning), restDuration);
+        }
+        if (miniBossesDestroyed == 1)
+        {
+            forceFieldRef.GetComponent<SpriteRenderer>().sprite = ReducedForceField1;
+        }
+        else if (miniBossesDestroyed == 2)
+        {
+            forceFieldRef.GetComponent<SpriteRenderer>().sprite = ReducedForceField2;
         }
     }
 
     void StopStartSpinning()
     {
         spinning = !spinning;
-        Invoke(nameof(StopStartSpinning), timeBetweenAttacks);
+        if (spinning)
+        {
+            Invoke(nameof(StopStartSpinning), attackDuration);
+        }
+        else
+        {
+            Invoke(nameof(StopStartSpinning), restDuration);
+        }
     }
 
     void ShootInCircle()

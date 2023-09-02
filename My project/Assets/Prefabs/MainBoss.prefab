@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8830747758841109584}
   - component: {fileID: 7349899722445507317}
   - component: {fileID: -343042278035317454}
+  - component: {fileID: 8307562182375706467}
   m_Layer: 0
   m_Name: MainBoss
   m_TagString: MainBoss
@@ -122,6 +123,8 @@ MonoBehaviour:
   bullet: {fileID: 5883862051124386497, guid: 0f1426fbac62f534f80b6ea1c326cca6, type: 3}
   bulletSpeed: 30
   bulletCooldown: 1
+  ReducedForceField1: {fileID: 21300000, guid: e56de1a30b887d843b90d9631b620702, type: 3}
+  ReducedForceField2: {fileID: 21300000, guid: 854b78c32d6289e41b160ff5917cb98f, type: 3}
 --- !u!60 &7349899722445507317
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -193,6 +196,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 1000
+--- !u!50 &8307562182375706467
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441073357299765604}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &6477895485206474894
 GameObject:
   m_ObjectHideFlags: 0
