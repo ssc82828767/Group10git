@@ -66,13 +66,13 @@ public class PlayerController : MonoBehaviour
         int up = 0;
         int down = 180;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 transform.eulerAngles = Vector3.forward * leftup;
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 transform.eulerAngles = Vector3.forward * leftdown;
             }
@@ -81,13 +81,13 @@ public class PlayerController : MonoBehaviour
                 transform.eulerAngles = Vector3.forward * left;
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 transform.eulerAngles = Vector3.forward * rightup;
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 transform.eulerAngles = Vector3.forward * rightdown;
             }
@@ -96,11 +96,11 @@ public class PlayerController : MonoBehaviour
                 transform.eulerAngles = Vector3.forward * right;
             }
         }
-        else if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.eulerAngles = Vector3.forward * up;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             transform.eulerAngles = Vector3.forward * down;
         }

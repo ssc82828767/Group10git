@@ -22,6 +22,7 @@ public class MainBossController : MonoBehaviour
     private GameObject forceFieldRef;
     private bool spinning = true;
     private float bulletCooldownCurrent = 0f;
+    private bool hasForceField = true;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,7 @@ public class MainBossController : MonoBehaviour
         if(miniBossesDestroyed >= miniBossCount)
         {
             Destroy(forceFieldRef);
+            hasForceField = false;
             Invoke(nameof(StopStartSpinning), restDuration);
         }
         if (miniBossesDestroyed == 1)
@@ -107,5 +109,10 @@ public class MainBossController : MonoBehaviour
 
         // Rotate the game object.
         transform.rotation = Quaternion.Slerp(transform.rotation, awayRotation, Time.deltaTime);
+    }
+
+    public bool HasForceField()
+    {
+        return hasForceField;
     }
 }
