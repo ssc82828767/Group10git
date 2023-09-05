@@ -108,7 +108,7 @@ public class spawn_zone : MonoBehaviour
                 Random.Range(-ySize / 2, ySize / 2) + transform.position.y,
                 0
             ), Quaternion.identity);
-            spawnCD = Random.Range(4, 11);
+            spawnCD = Random.Range(4, 12);
             enemy = null;
         }
     }
