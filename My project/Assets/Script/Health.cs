@@ -50,7 +50,6 @@ public class Health : MonoBehaviour
         if (spriteRenderer == null) 
         { 
             spriteRenderer = gameObject.GetComponentInParent<SpriteRenderer>();
-            Debug.Log(spriteRenderer);
         }
         spriteRenderer.color = Color.red;
     }
