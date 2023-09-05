@@ -9,8 +9,10 @@ public class Start_Menu : MonoBehaviour
 {
     public AudioClip clip;
     public Transform guide;
-    public float timer = 5.0f;
+    public Transform guide2;
+    public float timer = 0.1f;
     public bool start;
+    public bool start2;
 
     //loading bar
     public Image loading_bar;
@@ -22,6 +24,7 @@ public class Start_Menu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         guide = transform.Find("guide");
+        guide2 = transform.Find("guide2");
     }
 
     public void StartGame()
@@ -37,13 +40,33 @@ public class Start_Menu : MonoBehaviour
     {
         if (start)
         {
-            ProgressBar();
+            //ProgressBar();
+            //timer -= Time.deltaTime;
+            //if (timer <= 0)
+            //{
+            //start = false;
+            //timer = 5.0f;
+            //SceneManager.LoadScene("Scene_Base");
+            //}
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                guide2.gameObject.SetActive(true);
+                start2 = true;
+                start = false;
+                //SceneManager.LoadScene("Scene_Base");
+            }
+        }
+        if (start2)
+        {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                start = false;
-                timer = 5.0f;
-                SceneManager.LoadScene("Scene_Base");
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    //start2 = false;
+                    //timer = 1.0f;
+                    SceneManager.LoadScene("Scene_Base");
+                }
             }
         }
     }

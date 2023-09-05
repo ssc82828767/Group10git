@@ -37,6 +37,10 @@ public class end : MonoBehaviour
                 audio_trigger = true;
             }
         }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
 
         //winning
         finalboss = GameObject.FindWithTag("MainBoss");
@@ -53,5 +57,9 @@ public class end : MonoBehaviour
     public void return_menu()
     {
         SceneManager.LoadScene("Start Menu");
+    }
+    public void play_again()
+    {
+        SceneManager.LoadScene("Scene_Base");
     }
 }

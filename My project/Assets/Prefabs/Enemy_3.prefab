@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedModifier: 25
-  itemdrop: {fileID: 0}
+  itemdrop: {fileID: 1594875112216612058, guid: 97cadb54ad6b40545bb5e85b6e9b1aff, type: 3}
 --- !u!50 &8952004100224279271
 Rigidbody2D:
   serializedVersion: 4
