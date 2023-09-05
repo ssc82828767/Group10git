@@ -35,7 +35,6 @@ public class BulletController_homing : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {        
-        Debug.Log(other.gameObject.name);
         if(Array.IndexOf(unaffectedTags, other.gameObject.tag) < 0)
         {
             other.gameObject.GetComponent<Health>().ReduceHP(bulletDamage);

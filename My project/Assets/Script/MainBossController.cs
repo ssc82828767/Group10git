@@ -79,7 +79,6 @@ public class MainBossController : MonoBehaviour
 
     void ShootInCircle()
     {
-        Debug.Log("Shooting");
         GameObject bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
         GameObject bulletInstance2 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
         GameObject bulletInstance3 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.AngleAxis(90, Vector3.forward));
