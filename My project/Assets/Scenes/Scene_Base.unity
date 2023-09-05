@@ -4508,6 +4508,14 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 70073ab19b7d70a499fa22f382d61602, type: 3}
+    - target: {fileID: 2612198312114262664, guid: dc1d44166af0d8a43b2988bc2571c5c5, type: 3}
+      propertyPath: clip_win
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ee8871bde65fd646a9be9ce52471720, type: 3}
+    - target: {fileID: 2612198312114262664, guid: dc1d44166af0d8a43b2988bc2571c5c5, type: 3}
+      propertyPath: clip_lose
+      value: 
+      objectReference: {fileID: 8300000, guid: 838acdc310e8d3e4f8ccaf8790400723, type: 3}
     - target: {fileID: 4466487767713045145, guid: dc1d44166af0d8a43b2988bc2571c5c5, type: 3}
       propertyPath: m_Text
       value: Congratulations!
