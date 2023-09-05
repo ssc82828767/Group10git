@@ -23,7 +23,8 @@ public class ScoreText : MonoBehaviour
     private GameObject mainBoss;
     private float fBossHP, fBossMaxHP;
 
-    private int index; 
+    private int index;
+
 
     // Start is called before the first frame update
     void Start()
@@ -118,4 +119,5 @@ public class ScoreText : MonoBehaviour
             HPbar_BG.transform.localScale = new Vector2(2.5f, 1f);
         }
     }
+
 }

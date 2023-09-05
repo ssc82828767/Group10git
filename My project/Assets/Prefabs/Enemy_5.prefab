@@ -122,6 +122,7 @@ MonoBehaviour:
   hp: 3
   maxhp: 0
   clip: {fileID: 8300000, guid: b32419c6739277447b5679007f818f3b, type: 3}
+  particle: {fileID: 6416058562882402133, guid: 7799823149dc53c40800a7779149cff3, type: 3}
 --- !u!114 &-1007874469577103314
 MonoBehaviour:
   m_ObjectHideFlags: 0
