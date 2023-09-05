@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
     void ShootBullet()
     {
         bulletCooldownCurrent += Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        if (bulletCooldownCurrent >= bulletCooldown)
         {
             GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4, transform.rotation);
             GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
     void ShootBullet2()
     {
         bulletCooldownCurrent += Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        if (bulletCooldownCurrent >= bulletCooldown)
         {
             GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation);
             GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
@@ -141,7 +141,7 @@ public class PlayerController : MonoBehaviour
     void ShootBullet3()
     {
         bulletCooldownCurrent += Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        if (bulletCooldownCurrent >= bulletCooldown)
         {
             GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation);
             GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
     void ShootBullet4()
     {
         bulletCooldownCurrent += Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space) && bulletCooldownCurrent >= bulletCooldown)
+        if (bulletCooldownCurrent >= bulletCooldown)
         {
             GameObject bulletInstance = Instantiate(bullet, transform.position + transform.up * 4 + transform.right * 2, transform.rotation);
             GameObject bulletInstance2 = Instantiate(bullet, transform.position + transform.up * -4 + transform.right * 2, transform.rotation * Quaternion.AngleAxis(180, Vector3.forward));
