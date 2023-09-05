@@ -28,7 +28,9 @@ public class PlayerController : MonoBehaviour
     {
         health = GetComponent<Health>();
         score = 0;
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -116,6 +118,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
     void ShootBullet2()
@@ -132,6 +135,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance4.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
     void ShootBullet3()
@@ -153,6 +157,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
     void ShootBullet4()
@@ -174,6 +179,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
 

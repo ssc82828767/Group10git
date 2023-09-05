@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item_Powerup : MonoBehaviour
 {
     public int index;
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class Item_Powerup : MonoBehaviour
         //self destory after taken by player
         if (other.gameObject.tag == "Player")
         {
+            AudioSource.PlayClipAtPoint(clip, this.transform.position,1f);
             Destroy(gameObject);
         }
     }

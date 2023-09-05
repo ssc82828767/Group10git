@@ -6,6 +6,7 @@ public class Item_Health : MonoBehaviour
 {
     private Health health;
     public int index;
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class Item_Health : MonoBehaviour
         //self destory after taken by player
         if (other.gameObject.tag == "Player")
         {
+            AudioSource.PlayClipAtPoint(clip, this.transform.position);
             health = other.GetComponent<Health>();
             health.hp = health.maxhp;
             Destroy(gameObject);
