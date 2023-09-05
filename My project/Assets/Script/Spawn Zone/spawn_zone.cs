@@ -90,11 +90,11 @@ public class spawn_zone : MonoBehaviour
             {
                 enemy = enemy1;
             }
-            else if (enemy_index >= 51 && enemy_index <= 75)
+            else if (enemy_index >= 51 && enemy_index <= 80)
             {
                 enemy = enemy2;
             }
-            else if (enemy_index >= 76 && enemy_index <= 90)
+            else if (enemy_index >= 81 && enemy_index <= 90)
             {
                 enemy = enemy4;
             }

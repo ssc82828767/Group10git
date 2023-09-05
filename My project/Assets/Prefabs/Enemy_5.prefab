@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d06214c16d59c1439731a1006a16fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  value: 2
   unaffectedTags:
   - MiniBoss
   - WeakSpot
