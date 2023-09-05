@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  clip: {fileID: 8300000, guid: 5f540247027512b4bbc2bf251f956424, type: 3}
 --- !u!212 &4829574630325366637
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -206,3 +206,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   maxhp: 0
+  clip: {fileID: 8300000, guid: b32419c6739277447b5679007f818f3b, type: 3}

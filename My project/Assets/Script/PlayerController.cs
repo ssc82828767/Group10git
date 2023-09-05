@@ -28,7 +28,9 @@ public class PlayerController : MonoBehaviour
     {
         health = GetComponent<Health>();
         score = 0;
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -66,13 +68,13 @@ public class PlayerController : MonoBehaviour
         int up = 0;
         int down = 180;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 transform.eulerAngles = Vector3.forward * leftup;
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 transform.eulerAngles = Vector3.forward * leftdown;
             }
@@ -81,13 +83,13 @@ public class PlayerController : MonoBehaviour
                 transform.eulerAngles = Vector3.forward * left;
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 transform.eulerAngles = Vector3.forward * rightup;
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 transform.eulerAngles = Vector3.forward * rightdown;
             }
@@ -96,11 +98,11 @@ public class PlayerController : MonoBehaviour
                 transform.eulerAngles = Vector3.forward * right;
             }
         }
-        else if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.eulerAngles = Vector3.forward * up;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             transform.eulerAngles = Vector3.forward * down;
         }
@@ -116,6 +118,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance2.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
     void ShootBullet2()
@@ -132,6 +135,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance3.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance4.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
     void ShootBullet3()
@@ -153,6 +157,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
     void ShootBullet4()
@@ -174,6 +179,7 @@ public class PlayerController : MonoBehaviour
             bulletInstance5.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletInstance6.GetComponent<BulletController>().bulletSpeed = bulletSpeed;
             bulletCooldownCurrent = 0.0f;
+            this.GetComponent<AudioSource>().Play();
         }
     }
 

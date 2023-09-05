@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public int hp = 1;
     public int maxhp;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class Health : MonoBehaviour
             {
                 Destroy(transform.parent.gameObject);
             }
+            AudioSource.PlayClipAtPoint(clip, this.transform.position, 1f);
             Destroy(gameObject);
         }
         showDamage();

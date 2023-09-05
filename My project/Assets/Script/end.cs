@@ -9,6 +9,8 @@ public class end : MonoBehaviour
     public GameObject finalboss;
     public Transform bg;
     public Transform win;
+    public AudioClip clip_lose;
+    public AudioClip clip_win;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class end : MonoBehaviour
         {
             bg.gameObject.SetActive(true);
             Time.timeScale = 0f;
+            AudioSource.PlayClipAtPoint(clip_lose, this.transform.position, 1f);
         }
 
         //winning
@@ -35,6 +38,7 @@ public class end : MonoBehaviour
         {
             win.gameObject.SetActive(true);
             Time.timeScale = 0f;
+            AudioSource.PlayClipAtPoint(clip_win, this.transform.position, 1f);
         }
 
 

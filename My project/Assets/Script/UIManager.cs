@@ -16,6 +16,13 @@ public class ScoreText : MonoBehaviour
     public Text indicator;
     public float hp, maxhp;
     public GameObject player;
+
+    public Image BossHPBar, BossHPBar_BG;
+    public Text bossText;
+
+    private GameObject mainBoss;
+    private float fBossHP, fBossMaxHP;
+
     private int index; 
 
     // Start is called before the first frame update
@@ -56,6 +63,30 @@ public class ScoreText : MonoBehaviour
             hp = player.GetComponent<Health>().hp;
         }
         HPbar.fillAmount = hp / maxhp;
+
+        mainBoss = GameObject.FindWithTag("MainBoss");
+        if (mainBoss == null)
+        {
+            fBossMaxHP = 1;
+            fBossHP = 0;
+            BossHPBar.fillAmount = 0;
+            BossHPBar_BG.fillAmount = 0;
+            bossText.text = "";
+        }
+        else if (mainBoss.GetComponent<MainBossController>().HasForceField())
+        {
+            BossHPBar.fillAmount = 0;
+            BossHPBar_BG.fillAmount = 0;
+            bossText.text = "";
+        }
+        else
+        {
+            bossText.text = "BOSS";
+            fBossMaxHP = mainBoss.GetComponentsInChildren<Health>()[0].maxhp;
+            fBossHP = mainBoss.GetComponentsInChildren<Health>()[0].hp;
+            BossHPBar.fillAmount = fBossHP / fBossMaxHP;
+            BossHPBar_BG.fillAmount = 1;
+        }
     }
 
     // more max health, longer the health bar
