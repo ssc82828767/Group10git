@@ -105,18 +105,18 @@ public class ScoreText : MonoBehaviour
         }
         if (index == 2)
         {
-            HPbar.transform.localScale = new Vector2(1.5f, 1f);
-            HPbar_BG.transform.localScale = new Vector2(1.5f, 1f);
+            HPbar.transform.localScale = new Vector2(1.25f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(1.25f, 1f);
         }
         if (index == 3)
         {
-            HPbar.transform.localScale = new Vector2(2f, 1f);
-            HPbar_BG.transform.localScale = new Vector2(2f, 1f);
+            HPbar.transform.localScale = new Vector2(1.5f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(1.5f, 1f);
         }
         if (index == 4)
         {
-            HPbar.transform.localScale = new Vector2(2.5f, 1f);
-            HPbar_BG.transform.localScale = new Vector2(2.5f, 1f);
+            HPbar.transform.localScale = new Vector2(2.0f, 1f);
+            HPbar_BG.transform.localScale = new Vector2(2.0f, 1f);
         }
     }
 

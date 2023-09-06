@@ -305,10 +305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1531c3fb936cdf24c93cabb7a01a1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 20
-  maxhp: 20
-  clip: {fileID: 0}
-  particle: {fileID: 0}
+  hp: 25
+  maxhp: 25
+  clip: {fileID: 8300000, guid: d9b82ef3e8bd96e4bb680206cdecf4f1, type: 3}
+  particle: {fileID: 6416058562882402133, guid: 4a39d178f6f2e91498c796b850d7e6ac, type: 3}
 --- !u!114 &8191741635219891231
 MonoBehaviour:
   m_ObjectHideFlags: 0
