@@ -51,6 +51,7 @@ public class Start_Menu : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 guide2.gameObject.SetActive(true);
+                guide.gameObject.SetActive(false);
                 start2 = true;
                 start = false;
                 //SceneManager.LoadScene("Scene_Base");
