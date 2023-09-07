@@ -12,7 +12,11 @@ public class Damage : MonoBehaviour
     {
         if (Array.IndexOf(unaffectedTags, other.gameObject.tag) < 0)
         {
-            other.gameObject.GetComponent<Health>().ReduceHP(value);
+            if (other.gameObject.GetComponent<Health>())
+            {
+                other.gameObject.GetComponent<Health>().ReduceHP(value);
+            }
+            //other.gameObject.GetComponent<Health>().ReduceHP(value);
         }
     }
 }
