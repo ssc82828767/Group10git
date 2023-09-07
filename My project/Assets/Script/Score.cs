@@ -22,6 +22,10 @@ public class Score : MonoBehaviour
     private void OnDestroy()
     {
         PlayerController.score += score;
-        GameObject.Find("Canvas").GetComponent<ScoreText>().UpdateScore();
+        ScoreText scoreText = GameObject.Find("Canvas").GetComponent<ScoreText>();
+        if (scoreText != null )
+        {
+            scoreText.UpdateScore();
+        }
     }
 }
