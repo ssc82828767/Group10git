@@ -135,17 +135,21 @@ PrefabInstance:
       propertyPath: tether
       value: 
       objectReference: {fileID: 269128926}
+    - target: {fileID: -3656090396485641187, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1243717735793233903, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_Name
       value: MiniBoss 2
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 186.2
+      value: 172.5
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 176.2
+      value: 167.9
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3157,6 +3161,10 @@ PrefabInstance:
       propertyPath: tether
       value: 
       objectReference: {fileID: 1701374114}
+    - target: {fileID: -3656090396485641187, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1243717735793233903, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
       propertyPath: m_Name
       value: MiniBoss 1
@@ -3167,11 +3175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111
+      value: 103.1
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -195
+      value: -176.9
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3393,17 +3401,21 @@ PrefabInstance:
       propertyPath: tether
       value: 
       objectReference: {fileID: 718736261}
+    - target: {fileID: -3656090396485641187, guid: 92c971f6af966044891b72573068b555, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1243717735793233903, guid: 92c971f6af966044891b72573068b555, type: 3}
       propertyPath: m_Name
       value: MiniBoss (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: 92c971f6af966044891b72573068b555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -199.02444
+      value: -189.3
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: 92c971f6af966044891b72573068b555, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 94.443115
+      value: 89.7
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: 92c971f6af966044891b72573068b555, type: 3}
       propertyPath: m_LocalPosition.z
