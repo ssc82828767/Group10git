@@ -10,6 +10,7 @@ public class Start_Menu : MonoBehaviour
     public AudioClip clip;
     public Transform guide;
     public Transform guide2;
+    public Transform menu;
     public float timer = 0.1f;
     public bool start;
     public bool start2;
@@ -25,12 +26,14 @@ public class Start_Menu : MonoBehaviour
         Time.timeScale = 1.0f;
         guide = transform.Find("guide");
         guide2 = transform.Find("guide2");
+        menu = transform.Find("menu");
     }
 
     public void StartGame()
     {
         AudioSource.PlayClipAtPoint(clip, this.transform.position, 1f);
         PlayerController.score = 0;
+        menu.gameObject.SetActive(false);
         guide.gameObject.SetActive(true);
         start = true;
     }
