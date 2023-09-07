@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 186.95317
+      value: 186.2
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 165.92828
+      value: 176.2
       objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: d4384f80d2d6d3e43907f244e4301201, type: 3}
       propertyPath: m_LocalPosition.z
@@ -634,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5701522568394722255, guid: 0c2a97c1f954f294b9f35bf6759f9515, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7742821089641972530, guid: 0c2a97c1f954f294b9f35bf6759f9515, type: 3}
       propertyPath: m_Name
@@ -1232,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5701522568394722255, guid: 0c2a97c1f954f294b9f35bf6759f9515, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7742821089641972530, guid: 0c2a97c1f954f294b9f35bf6759f9515, type: 3}
       propertyPath: m_Name
@@ -3161,6 +3161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniBoss 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1243717735793233903, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4544193743097945079, guid: a4e355056e50c68418972b8a6190ed91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 111
@@ -3492,7 +3496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5701522568394722255, guid: 0c2a97c1f954f294b9f35bf6759f9515, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7742821089641972530, guid: 0c2a97c1f954f294b9f35bf6759f9515, type: 3}
       propertyPath: m_Name
